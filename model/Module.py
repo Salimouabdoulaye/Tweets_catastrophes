@@ -1,24 +1,17 @@
 # Machine Learning
 from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.metrics import classification_report, roc_auc_score, ConfusionMatrixDisplay
+from sklearn.metrics import classification_report
 from sklearn.metrics import classification_report, recall_score, f1_score, accuracy_score
 from sklearn.linear_model import LogisticRegression
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
-from sklearn.ensemble import StackingClassifier, RandomForestClassifier
-from imblearn.over_sampling import SMOTE
-from xgboost import XGBClassifier
-from lightgbm import LGBMClassifier
 from sklearn.pipeline import Pipeline
-from sklearn.ensemble import StackingClassifier
-from sklearn.model_selection import GridSearchCV, cross_validate, StratifiedKFold
+from sklearn.model_selection import GridSearchCV
 from transformers import AutoTokenizer, AutoModel
 from sklearn.pipeline import Pipeline
 from sklearn.base import BaseEstimator, TransformerMixin
 import torch
 from tqdm import tqdm
-from imblearn.pipeline import Pipeline as ImbPipeline
-from imblearn.over_sampling import SMOTE
+from imblearn.pipeline import Pipeline
 from sklearn.svm import SVC
 import pickle
 from sklearn.svm import SVC
@@ -27,29 +20,9 @@ import lightgbm as lgb
 import torch
 
 
-# Sauvegarde des modèles
-import joblib
-
-# Système et utilitaires
-import os
-from datetime import datetime
-from pathlib import Path
-
-# API et web
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import List
-
-# Implicite 
-import streamlit
-import requests
-import uvicorn
-
 import pandas as pd
 import numpy as np
-import json
 import pickle
-
 
 class BERTEmbedder(BaseEstimator, TransformerMixin):
     """
