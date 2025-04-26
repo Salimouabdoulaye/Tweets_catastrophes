@@ -29,7 +29,7 @@ Cette application analyse des tweets pour détecter s'ils rapportent des catastr
 docker-compose up -d
 ```
 
-L'application sera accessible à l'adresse http://localhost:8501
+L'application sera accessible à l'adresse https://tweetscatastrophes-etzwg8ha9edt3qgjbx9vjj.streamlit.app/
 
 ### Sans Docker
 
